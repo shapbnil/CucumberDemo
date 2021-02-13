@@ -14,14 +14,10 @@ steps:
   inputs:
     mavenPomFile: 'CucumberDemo/CucumberDemo/pom.xml'
     mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'CucumberDemo/CucumberDemo/pom.xml'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.8'
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
